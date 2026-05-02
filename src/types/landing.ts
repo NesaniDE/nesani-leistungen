@@ -11,6 +11,8 @@ export type LpStat = {
   label: string;
 };
 
+export type HeroLayout = "bleed" | "split";
+
 export type LandingPage = {
   slug: string;
   metaTitle: string;
@@ -23,6 +25,7 @@ export type LandingPage = {
     secondaryCta: { label: string; href: string };
     image: string;
     imageMobile: string;
+    layout: HeroLayout;
   };
   stats: [LpStat, LpStat, LpStat];
   features: {

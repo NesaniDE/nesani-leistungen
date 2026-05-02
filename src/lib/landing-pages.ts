@@ -15,6 +15,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/lp/websites-hero.webp",
       imageMobile: "/images/lp/websites-hero-mobile.webp",
+      layout: "bleed",
     },
     stats: [
       { big: "100%", label: "Zufriedenheit" },
@@ -78,6 +79,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/services/leistung-ki-workflows.png",
       imageMobile: "/images/services/leistung-ki-workflows.png",
+      layout: "split",
     },
     stats: [
       { big: "40%", label: "Weniger manuelle Arbeit" },
@@ -141,6 +143,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/services/leistung-autonome-agenten.png",
       imageMobile: "/images/services/leistung-autonome-agenten.png",
+      layout: "split",
     },
     stats: [
       { big: "0", label: "Black-Box-Entscheidungen" },
@@ -204,6 +207,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/services/leistung-social-media.png",
       imageMobile: "/images/services/leistung-social-media.png",
+      layout: "split",
     },
     stats: [
       { big: "1", label: "Klare Markenstimme" },
@@ -267,6 +271,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/services/leistung-ki-assistenten.png",
       imageMobile: "/images/services/leistung-ki-assistenten.png",
+      layout: "split",
     },
     stats: [
       { big: "24/7", label: "Erreichbarkeit" },
@@ -330,6 +335,7 @@ export const landingPages: LandingPage[] = [
       secondaryCta: { label: "Kostenlose Checkliste", href: "#checkliste" },
       image: "/images/services/leistung-systemarchitektur.png",
       imageMobile: "/images/services/leistung-systemarchitektur.png",
+      layout: "split",
     },
     stats: [
       { big: "0", label: "Quick-Fix-Kultur" },
