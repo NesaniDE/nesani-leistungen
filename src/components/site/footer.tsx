@@ -1,83 +1,136 @@
+import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
 
-import { services } from "@/lib/services";
+const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
+  {
+    heading: "LEISTUNGEN",
+    links: [
+      { label: "Websites", href: "/leistungen/websites" },
+      { label: "KI Workflows", href: "/leistungen/ki-workflows" },
+      { label: "Autonome Agenten", href: "/leistungen/autonome-agenten" },
+      { label: "Social Media & Online Präsenz", href: "/leistungen/social-media" },
+      { label: "KI Assistenten", href: "/leistungen/ki-assistenten" },
+      { label: "Individuelle Systeme", href: "/leistungen/systemarchitektur" },
+    ],
+  },
+  {
+    heading: "UNTERNEHMEN",
+    links: [
+      { label: "Über uns", href: "/ueber-uns" },
+      { label: "Leistungen", href: "/leistungen" },
+      { label: "Projekte", href: "/projekte" },
+      { label: "Blog", href: "/blog" },
+    ],
+  },
+  {
+    heading: "KONTAKT",
+    links: [
+      { label: "Projekt anfragen", href: "/kontakt" },
+      { label: "E-Mail", href: "mailto:info@nesani.de" },
+    ],
+  },
+];
 
-export function SiteFooter() {
+export function Footer() {
   return (
-    <footer className="mt-24 border-t border-white/5 bg-background">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-            <span className="inline-block h-2 w-2 rounded-full bg-white" />
-            NESANI
+    <footer className="bg-[#050505] text-white">
+      {/* Link columns */}
+      <div className="mx-auto max-w-[1344px] px-5 lg:px-12 py-16 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+        {COLS.map((col) => (
+          <div key={col.heading}>
+            <h4 className="text-[12px] font-semibold tracking-widest text-white/55 uppercase">
+              {col.heading}
+            </h4>
+            <ul className="mt-5 space-y-3 text-[14px]">
+              {col.links.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-white/85 hover:text-white transition"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <p className="mt-4 max-w-md text-sm text-white/60">
-            Wir bauen moderne Websites, KI-Workflows und autonome Systeme – aus
-            Schwäbisch Gmünd. Persönlicher Ansprechpartner statt Agenturkette.
-          </p>
-          <p className="mt-6 text-sm text-white/60">
-            <a
-              href="mailto:info@nesani.de"
-              className="underline-offset-4 hover:underline"
-            >
-              info@nesani.de
-            </a>
-            <span className="mx-2 text-white/30">·</span>
-            Schwäbisch Gmünd
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-white/40">
-            Leistungen
-          </p>
-          <ul className="space-y-3 text-sm text-white/70">
-            {services.map((s) => (
-              <li key={s.slug}>
-                <Link
-                  href={`/leistungen/${s.slug}`}
-                  className="transition hover:text-white"
-                >
-                  {s.shortName}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-white/40">
-            Unternehmen
-          </p>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li>
-              <Link href="/#leistungen" className="transition hover:text-white">
-                Über uns
-              </Link>
-            </li>
-            <li>
-              <Link href="/#kontakt" className="transition hover:text-white">
-                Kontakt
-              </Link>
-            </li>
-            <li>
-              <Link href="/impressum" className="transition hover:text-white">
-                Impressum
-              </Link>
-            </li>
-            <li>
-              <Link href="/datenschutz" className="transition hover:text-white">
-                Datenschutz
-              </Link>
-            </li>
-          </ul>
-        </div>
+        ))}
       </div>
 
-      <div className="border-t border-white/5">
-        <div className="container-page flex flex-col items-start justify-between gap-3 py-6 text-xs text-white/40 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} NESANI. Alle Rechte vorbehalten.</p>
-          <p>Sichtbarer. Effizienter. Autonomer.</p>
+      {/* Bottom: logo, socials, copyright */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-[1344px] px-5 lg:px-12 py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div className="flex items-center gap-8">
+            <Image
+              src="/images/shm-logo-white.png"
+              alt="Nesani"
+              width={40}
+              height={40}
+              className="h-9 w-9 object-contain"
+            />
+            <div className="flex items-center gap-3 text-white/80">
+              <a
+                href="https://www.linkedin.com/company/nesani"
+                target="_blank"
+                rel="noopener noreferrer external"
+                aria-label="LinkedIn"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:text-white transition"
+              >
+                <FaLinkedinIn className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/nesani.de/"
+                target="_blank"
+                rel="noopener noreferrer external"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:text-white transition"
+              >
+                <FaInstagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@nesani.de"
+                target="_blank"
+                rel="noopener noreferrer external"
+                aria-label="TikTok"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:text-white transition"
+              >
+                <FaTiktok className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61567359321825"
+                target="_blank"
+                rel="noopener noreferrer external"
+                aria-label="Facebook"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:text-white transition"
+              >
+                <FaFacebookF className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.youtube.com/@NesaniDE"
+                target="_blank"
+                rel="noopener noreferrer external"
+                aria-label="YouTube"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:text-white transition"
+              >
+                <FaYoutube className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6 text-[13px] text-white/60">
+            <div className="flex items-center gap-5">
+              <Link href="/impressum" className="hover:text-white transition">
+                Impressum
+              </Link>
+              <Link href="/datenschutz" className="hover:text-white transition">
+                Datenschutz
+              </Link>
+            </div>
+            <span>
+              © {new Date().getFullYear()} Nesani. Alle Rechte vorbehalten.
+            </span>
+          </div>
         </div>
       </div>
     </footer>

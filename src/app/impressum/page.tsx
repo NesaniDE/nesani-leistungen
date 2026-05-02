@@ -1,44 +1,50 @@
-import { SiteHeader } from "@/components/site/header";
-import { SiteFooter } from "@/components/site/footer";
+import type { Metadata } from "next";
 
-export const metadata = {
+import { Header } from "@/components/site/header";
+import { Footer } from "@/components/site/footer";
+
+export const metadata: Metadata = {
   title: "Impressum",
 };
 
 export default function ImpressumPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <section className="container-page py-24 md:py-32">
-          <p className="mb-5 text-xs uppercase tracking-widest text-white/40">
-            Rechtliches
-          </p>
-          <h1 className="heading-section text-balance text-white">Impressum</h1>
-          <div className="mt-12 max-w-2xl space-y-6 text-sm text-white/70 md:text-base">
-            <p>
-              Dies ist eine Demo-Seite. Bitte fügen Sie hier Ihre offiziellen
-              Impressums-Angaben gemäß § 5 TMG ein.
-            </p>
-            <p>
-              <strong className="text-white">NESANI</strong>
-              <br />
-              Schwäbisch Gmünd
-              <br />
-              Deutschland
-            </p>
-            <p>
-              <a
-                href="mailto:info@nesani.de"
-                className="underline-offset-4 hover:underline"
-              >
-                info@nesani.de
-              </a>
-            </p>
+      <Header />
+      <main>
+        <section className="bg-white text-[#050505] pt-28 md:pt-32 pb-16 md:pb-24">
+          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12">
+            <div className="text-[13px] font-semibold tracking-widest uppercase text-[#050505]/60">
+              Rechtliches
+            </div>
+            <h1 className="mt-4 font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em]">
+              Impressum
+            </h1>
+            <div className="mt-10 max-w-[680px] space-y-6 text-[15px] md:text-[16px] leading-[1.6] text-[#050505]/80">
+              <p>
+                Dies ist eine Demo-Seite. Bitte fügen Sie hier Ihre offiziellen
+                Impressums-Angaben gemäß § 5 TMG ein.
+              </p>
+              <p>
+                <strong className="text-[#050505]">Nesani</strong>
+                <br />
+                Schwäbisch Gmünd
+                <br />
+                Deutschland
+              </p>
+              <p>
+                <a
+                  href="mailto:info@nesani.de"
+                  className="underline-offset-4 hover:underline"
+                >
+                  info@nesani.de
+                </a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

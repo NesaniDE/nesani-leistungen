@@ -1,50 +1,56 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-type ServiceHeroProps = {
-  eyebrow: string;
-  heading: string;
-  subline: string;
-};
+import { Icon } from "@/components/site/icon-map";
+import type { Service } from "@/types/services";
 
-export function ServiceHero({ eyebrow, heading, subline }: ServiceHeroProps) {
+export function ServiceHero({ service }: { service: Service }) {
   return (
-    <section className="relative overflow-hidden border-b border-white/5">
-      <div className="absolute inset-0 grid-noise" aria-hidden />
-      <div className="absolute inset-0 gradient-radial-fade" aria-hidden />
+    <section className="relative bg-white text-[#050505] pt-24 md:pt-28 lg:pt-32 pb-10 md:pb-14 lg:pb-16 overflow-hidden">
+      <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="lg:col-span-6">
+            <h1 className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[72px] leading-[1.03] tracking-[-0.02em] max-w-[15ch]">
+              {service.hero.heading}
+            </h1>
+            <p
+              className="mt-6 md:mt-8 text-[17px] md:text-[19px] leading-[1.5] text-[#050505]/80 max-w-[54ch]"
+              dangerouslySetInnerHTML={{ __html: service.hero.bodyHtml }}
+            />
 
-      <div className="container-page relative pt-20 pb-24 md:pt-28 md:pb-32">
-        <div className="flex flex-col items-start">
-          <Link
-            href="/#leistungen"
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-white/70 transition hover:bg-white/[0.06]"
-          >
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/60" />
-            {eyebrow}
-          </Link>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {service.hero.cards.map((card) => (
+                <a
+                  key={card.title}
+                  href="#process"
+                  className="group rounded-2xl border border-black/10 bg-white p-5 flex items-center gap-4 hover:border-black/40 transition"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[#F5F2EB] flex items-center justify-center shrink-0">
+                    <Icon name={card.icon} className="w-6 h-6 text-[#050505]" />
+                  </div>
+                  <div>
+                    <div className="font-sans font-semibold text-[15px]">
+                      {card.title}
+                    </div>
+                    <div className="text-[13px] text-[#050505]/70 mt-0.5">
+                      {card.body}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
 
-          <h1 className="heading-hero max-w-4xl text-balance text-white">
-            {heading}
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-balance text-base text-white/70 md:text-lg">
-            {subline}
-          </p>
-
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/#kontakt"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-medium text-black transition hover:bg-white/90"
-            >
-              Projekt anfragen
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="#prozess"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-white/[0.02] px-6 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
-            >
-              Prozess ansehen
-            </Link>
+          <div className="lg:col-span-6">
+            <div className="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3] lg:aspect-[5/4]">
+              <Image
+                src={service.hero.image}
+                alt={service.hero.imageAlt}
+                fill
+                priority
+                sizes="(min-width:1024px) 640px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

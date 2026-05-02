@@ -1,28 +1,63 @@
-export type ServiceFeature = {
+export type IconName =
+  | "code"
+  | "gauge"
+  | "target"
+  | "spark"
+  | "flow"
+  | "activity"
+  | "magnifier"
+  | "cog"
+  | "clipboard"
+  | "book"
+  | "plug"
+  | "network"
+  | "eye"
+  | "compass"
+  | "layers"
+  | "layout"
+  | "palette"
+  | "calendar"
+  | "key"
+  | "shield"
+  | "users"
+  | "rocket"
+  | "checklist";
+
+export type HeroFeatureCard = {
+  icon: IconName;
   title: string;
-  description: string;
+  body: string;
+};
+
+export type ServiceFeature = {
+  icon: IconName;
+  title: string;
+  body: string;
 };
 
 export type ServiceProcessStep = {
-  number: string;
+  num: string;
   title: string;
-  description: string;
-  bullets?: string[];
+  body: string;
+  bullets: string[];
 };
 
 export type ServiceTestimonial = {
   name: string;
+  role: string;
   quote: string;
 };
 
 export type ServiceCTA = {
   heading: string;
-  text: string;
+  body: string;
+  image?: string;
 };
 
 export type ServiceAudience = {
+  eyebrow: string;
   heading: string;
-  intro: string;
+  bodyHtml: string;
   bullets: string[];
 };
 
@@ -32,13 +67,27 @@ export type Service = {
   navName: string;
   tagline: string;
   hero: {
-    eyebrow: string;
     heading: string;
-    subline: string;
+    bodyHtml: string;
+    image: string;
+    imageAlt: string;
+    cards: [HeroFeatureCard, HeroFeatureCard];
   };
   audience: ServiceAudience;
-  features: ServiceFeature[];
-  testimonial: ServiceTestimonial;
+  features: {
+    heading: string;
+    items: [ServiceFeature, ServiceFeature, ServiceFeature];
+  };
+  testimonial: {
+    heading: string;
+    name: string;
+    role: string;
+    quote: string;
+  };
+  processBanner: {
+    heading: string;
+    body: string;
+  };
   process: ServiceProcessStep[];
   finalCta: ServiceCTA;
 };

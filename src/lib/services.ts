@@ -8,94 +8,114 @@ export const services: Service[] = [
     tagline:
       "Moderne, schnell ladende Websites – technisch sauber, auf Conversion ausgerichtet und bereit für SEO.",
     hero: {
-      eyebrow: "Websites",
       heading: "Moderne, schnelle und konvertierende Websites.",
-      subline:
-        "Die Website als technisch performanter und inhaltlich überzeugender Eindruck, zugeschnitten auf Zielgruppe und Positionierung – gebaut auf Next.js.",
-    },
-    audience: {
-      heading: "Für wen das passt.",
-      intro:
-        "Eine Website ist mehr als ein Online-Auftritt. Sie ist der erste Eindruck, der häufig über Vertrauen und Anfragen entscheidet. Wir bauen Seiten, die Ihrer Positionierung gerecht werden – technisch sauber, auf Conversion ausgerichtet und bereit für SEO.",
-      bullets: [
-        "Unternehmen mit veralteter Web-Präsenz und Modernisierungsbedarf.",
-        "Dienstleister mit Anfragen- und Lead-Bedarf über die Website.",
-        "Marken, die einen persönlichen Ansprechpartner statt Agenturkette wollen.",
+      bodyHtml:
+        'Die Website ist Ihr erster Eindruck. <span class="font-semibold">Technisch performant</span> und <span class="font-semibold">inhaltlich überzeugend</span> – zugeschnitten auf Zielgruppe und Positionierung, gebaut auf Next.js.',
+      image: "/images/services/leistung-websites.png",
+      imageAlt: "Moderne Website in Entwicklung",
+      cards: [
+        {
+          icon: "code",
+          title: "Next.js-Stack",
+          body: "Performance und Core Web Vitals",
+        },
+        {
+          icon: "target",
+          title: "Conversion-Design",
+          body: "Design folgt Funktion",
+        },
       ],
     },
-    features: [
-      {
-        title: "Next.js & TypeScript",
-        description:
-          "Moderner, typsicherer Stack – mobil-optimiert, wartbar und für Teams nach dem Launch verständlich aufgebaut.",
-      },
-      {
-        title: "Core Web Vitals",
-        description:
-          "Schnelle Ladezeiten, saubere Bild- und Font-Strategie – damit Google-Ranking und Nutzererlebnis nicht gegeneinander arbeiten.",
-      },
-      {
-        title: "Conversion & SEO",
-        description:
-          "Funktionales Design, klare Hierarchie und Inhalte, die auf Anfragen einzahlen – ohne Marketing-Floskeln.",
-      },
-    ],
+    audience: {
+      eyebrow: "Für wen",
+      heading: "Websites, die Anfragen bringen.",
+      bodyHtml:
+        'Kein Templateshop, kein Agentur-Overhead. Ein <span class="font-semibold">Ansprechpartner</span>, der versteht, für wen gebaut wird – und <span class="font-semibold">sauberer Code</span>, den Ihr Team auch nach dem Launch noch versteht.',
+      bullets: [
+        "Unternehmen mit veralteter oder fehlender Web-Präsenz.",
+        "Dienstleister, die gezielt mehr qualifizierte Anfragen wollen.",
+        "Marken, die professionell auftreten – ohne Agenturketten.",
+      ],
+    },
+    features: {
+      heading: "Was in jeder Website steckt",
+      items: [
+        {
+          icon: "code",
+          title: "Next.js & TypeScript",
+          body: "Moderner Stack mit sauberem Code, typsicher und mobil-optimiert – bereit für alles, was danach kommt.",
+        },
+        {
+          icon: "gauge",
+          title: "Core Web Vitals",
+          body: "Schnelle Ladezeiten und technische Qualität, die Google belohnt – ohne Performance-Tricksereien.",
+        },
+        {
+          icon: "target",
+          title: "Conversion & SEO",
+          body: "Design folgt Funktion. Inhalte und Struktur sind auf Anfragen ausgelegt, nicht auf hübsche Screenshots.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden eine Website von Nesani",
       name: "Marc P.",
+      role: "Beispielrezension",
       quote:
-        "Seit dem Relaunch kommen spürbar mehr qualifizierte Anfragen rein. Technisch sauber, wirtschaftlich messbar – das war für uns die richtige Entscheidung.",
+        "Nedim denkt mit statt nur umzusetzen. Das Ergebnis war nicht nur technisch sauber, sondern wirtschaftlich spürbar – unsere Anfragen haben sich nach dem Relaunch merklich erhöht.",
+    },
+    processBanner: {
+      heading: "So entsteht Ihre Website.",
+      body: "Vier klare Schritte vom Erstgespräch bis zur Übergabe – mit festen Meilensteinen, kurzen Abstimmungen und einem Ansprechpartner, der technisch tief im Projekt steckt.",
     },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Analyse & Strategie",
-        description:
-          "Wir starten mit einer klaren Sicht auf Ziele, Zielgruppe und Wettbewerb – damit der Funktionsumfang passt, bevor Aufwand entsteht.",
+        body: "Wettbewerb, Zielgruppe und Positionierung werden gemeinsam geschärft – und daraus die Funktionen Ihrer Website abgeleitet.",
         bullets: [
-          "Wettbewerbs- und Marktcheck",
-          "Positionierung und Zielgruppe",
-          "Funktionsumfang und Anforderungen",
+          "Wettbewerbs- und Zielgruppen-Check",
+          "Positionierung und Kernbotschaften",
+          "Funktionsumfang und Seitenstruktur",
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Konzept & Design",
-        description:
-          "Wireframes und UI-Design folgen der Inhaltslogik – nicht umgekehrt. So entstehen Seiten, die führen statt nur dekorieren.",
+        body: "Wireframes, UI-Entwurf und Tonalität nach dem Prinzip: Design folgt Funktion. Nichts Dekoratives – alles mit Zweck.",
         bullets: [
-          "Wireframes und Informationsarchitektur",
-          "UI-Design auf Basis Ihrer Marke",
-          "Content-Struktur und Hierarchie",
+          "Wireframes für klare Nutzerführung",
+          "UI-Design mit Markenpersönlichkeit",
+          "Tonalität, Bildsprache, Content-Struktur",
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Entwicklung",
-        description:
-          "Die Umsetzung in Next.js – mit Fokus auf Performance, Wartbarkeit und sauberen Integrationen statt Plug-in-Chaos.",
+        body: "Umsetzung mit Next.js und TypeScript. Performance-fokussiert, mobil-optimiert, sauber strukturiert.",
         bullets: [
-          "Next.js-Umsetzung mit TypeScript",
-          "Performance- und SEO-Tuning",
-          "Integrationen (CMS, Analytics, Tools)",
+          "Next.js-Stack, TypeScript, moderne Tools",
+          "Core Web Vitals und saubere Architektur",
+          "Integrationen und Schnittstellen",
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Launch & Übergabe",
-        description:
-          "Deployment, Dokumentation und optionales Training – damit Ihr Team die Seite eigenständig pflegen kann.",
+        body: "Deployment, Dokumentation und optionales Training – die Website geht nicht nur live, sie bleibt auch betreibbar.",
         bullets: [
-          "Deployment auf Vercel oder eigenem Setup",
-          "Dokumentation für interne Teams",
-          "Optionales Training und laufende Betreuung",
+          "Deployment und Go-Live",
+          "Dokumentation und Übergabe",
+          "Optionales Training, laufende Betreuung",
         ],
       },
     ],
     finalCta: {
       heading: "Bereit für Ihre neue Website?",
-      text: "Ein unverbindliches Erstgespräch – wir klären Ziele, Umfang und Zeitrahmen. Antwort innerhalb von 24 Stunden.",
+      body: "Ein unverbindliches Erstgespräch – wir klären Ziele, Umfang und Zeitrahmen. Antwort innerhalb von 24 Stunden.",
     },
   },
+
   {
     slug: "ki-workflows",
     shortName: "KI Workflows",
@@ -103,49 +123,71 @@ export const services: Service[] = [
     tagline:
       "Wiederkehrende Prozesse in automatisierte Abläufe überführen. Weniger Fleißarbeit, mehr Kapazität fürs Kerngeschäft.",
     hero: {
-      eyebrow: "KI Workflows",
       heading: "Intelligente Prozesse, die Zeit zurückgeben.",
-      subline:
-        "Wachstum ohne Skalierung des Aufwands ist das Ziel – KI-Automatisierung ist der Weg. Wir analysieren, entlasten und digitalisieren wiederkehrende Abläufe.",
+      bodyHtml:
+        'Wachstum ohne Skalierung des Aufwands ist das Ziel – <span class="font-semibold">KI-Automatisierung</span> ist der Weg. Wir analysieren, entlasten und digitalisieren <span class="font-semibold">wiederkehrende Abläufe</span>.',
+      image: "/images/services/leistung-ki-workflows.png",
+      imageAlt: "KI Workflow Automation",
+      cards: [
+        {
+          icon: "flow",
+          title: "Prozessaufnahme",
+          body: "Erst verstehen, dann automatisieren",
+        },
+        {
+          icon: "activity",
+          title: "Monitoring",
+          body: "Verlässlich im Live-Betrieb",
+        },
+      ],
     },
     audience: {
+      eyebrow: "Für wen",
       heading: "Mehr schaffen, ohne mehr zu tun.",
-      intro:
-        "Viele Unternehmen wachsen – aber die Prozesse wachsen mit. Jede zusätzliche Anfrage bedeutet mehr manuelle Arbeit. KI-Workflows durchbrechen diesen Zusammenhang: Aufwand bleibt stabil, während Output skaliert.",
+      bodyHtml:
+        'Viele Unternehmen wachsen – aber die Prozesse wachsen mit. Jede zusätzliche Anfrage bedeutet mehr manuelle Arbeit. <span class="font-semibold">KI-Workflows</span> durchbrechen diesen Zusammenhang: Aufwand bleibt stabil, während Output skaliert.',
       bullets: [
         "Unternehmen mit wiederkehrenden, manuellen Abläufen.",
-        "Teams, die an Kapazitätsgrenzen stoßen, ohne mehr einstellen zu wollen.",
+        "Teams, die an Kapazitätsgrenzen stoßen.",
         "Betriebe, die KI-Potenziale nutzen wollen – ohne Komplexität.",
       ],
     },
-    features: [
-      {
-        title: "Prozessaufnahme",
-        description:
-          "Bestehende Abläufe werden dokumentiert – inklusive aller Übergaben, Tools und manuellen Schritte. Erst verstehen, dann automatisieren.",
-      },
-      {
-        title: "Automatisierungsdesign",
-        description:
-          "Statt Werkzeug-Chaos eine klare Logik: Was wird wie automatisiert, wo bleibt der Mensch und wo greifen Eskalationsregeln.",
-      },
-      {
-        title: "Integration & Monitoring",
-        description:
-          "Anbindung an bestehende Tools, Fehlerbehandlung und transparente Überwachung im Betrieb – damit Automatisierung verlässlich bleibt.",
-      },
-    ],
+    features: {
+      heading: "Was in jedem KI-Workflow steckt",
+      items: [
+        {
+          icon: "clipboard",
+          title: "Prozessaufnahme",
+          body: "Bestehende Abläufe werden dokumentiert – inklusive aller Übergaben, Tools und manuellen Schritte. Erst verstehen, dann automatisieren.",
+        },
+        {
+          icon: "flow",
+          title: "Automatisierungsdesign",
+          body: "Statt Werkzeug-Chaos eine klare Logik: Was wird wie automatisiert, wo bleibt der Mensch und wo greifen Eskalationsregeln.",
+        },
+        {
+          icon: "activity",
+          title: "Integration & Monitoring",
+          body: "Anbindung an bestehende Tools, Fehlerbehandlung und transparente Überwachung im Betrieb – damit Automatisierung verlässlich bleibt.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden KI-Workflows von Nesani",
       name: "Jens B.",
+      role: "Beispielrezension",
       quote:
         "Wir haben rund 40 % unserer manuellen Arbeit automatisiert – ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer.",
     },
+    processBanner: {
+      heading: "So entstehen Ihre KI-Workflows.",
+      body: "Vier klare Schritte von der Prozessaufnahme bis ins Live-Monitoring – mit klaren Verantwortlichkeiten und einem Ansprechpartner, der technisch tief im Projekt steckt.",
+    },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Prozessaufnahme",
-        description:
-          "Erfassung bestehender Abläufe, Tools und Übergaben. Identifikation von Engpässen und Automatisierungspotenzialen – mit klarer Priorisierung.",
+        body: "Erfassung bestehender Abläufe, Tools und Übergaben. Identifikation von Engpässen und Automatisierungspotenzialen – mit klarer Priorisierung.",
         bullets: [
           "Workshop und Prozess-Mapping",
           "Tool- und Datenfluss-Analyse",
@@ -153,10 +195,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Automatisierungsdesign",
-        description:
-          "Konzepterstellung: Welche Schritte werden automatisiert, welche bleiben manuell, welche Tools werden angebunden – nachvollziehbar dokumentiert.",
+        body: "Konzepterstellung: Welche Schritte werden automatisiert, welche bleiben manuell, welche Tools werden angebunden – nachvollziehbar dokumentiert.",
         bullets: [
           "Zielbild und Logik je Workflow",
           "Auswahl der passenden Tools",
@@ -164,10 +205,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Aufbau & Test",
-        description:
-          "Workflow-Implementierung, Qualitätsprüfung und iterative Tests mit Echtdaten – damit Fehler vor dem Live-Betrieb auffallen.",
+        body: "Workflow-Implementierung, Qualitätsprüfung und iterative Tests mit Echtdaten – damit Fehler vor dem Live-Betrieb auffallen.",
         bullets: [
           "Implementierung der Workflows",
           "Tests mit echten Daten",
@@ -175,10 +215,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Übergabe & Monitoring",
-        description:
-          "Dokumentation, Schulung, Live-Monitoring und optionale laufende Betreuung – damit Automatisierung im Alltag verlässlich bleibt.",
+        body: "Dokumentation, Schulung, Live-Monitoring und optionale laufende Betreuung – damit Automatisierung im Alltag verlässlich bleibt.",
         bullets: [
           "Dokumentation und Schulung",
           "Live-Monitoring und Alerts",
@@ -188,9 +227,10 @@ export const services: Service[] = [
     ],
     finalCta: {
       heading: "Bereit, Zeit zurückzugewinnen?",
-      text: "Ein unverbindliches Erstgespräch – wir schauen gemeinsam auf Ihre Prozesse und zeigen, wo Automatisierung sich wirklich lohnt.",
+      body: "Ein unverbindliches Erstgespräch – wir schauen gemeinsam auf Ihre Prozesse und zeigen, wo Automatisierung sich wirklich lohnt.",
     },
   },
+
   {
     slug: "autonome-agenten",
     shortName: "Autonome Agenten",
@@ -198,49 +238,71 @@ export const services: Service[] = [
     tagline:
       "Systeme, die selbstständig handeln: beobachten, entscheiden, ausführen. Aus klaren Zielen werden messbare Resultate.",
     hero: {
-      eyebrow: "Autonome Agenten",
       heading: "Systeme, die selbstständig arbeiten.",
-      subline:
-        "Automatisierung führt Regeln aus. Autonome Agenten denken. Sie treffen Entscheidungen, passen sich an Situationen an und übernehmen Aufgaben eigenständig.",
+      bodyHtml:
+        'Automatisierung führt Regeln aus. <span class="font-semibold">Autonome Agenten</span> denken: Sie treffen Entscheidungen, passen sich an Situationen an und übernehmen Aufgaben <span class="font-semibold">eigenständig</span>.',
+      image: "/images/services/leistung-autonome-agenten.png",
+      imageAlt: "Autonome KI-Agenten",
+      cards: [
+        {
+          icon: "compass",
+          title: "Use-Case-Fokus",
+          body: "Autonomie nur, wo sie wirkt",
+        },
+        {
+          icon: "eye",
+          title: "Beobachtbarkeit",
+          body: "Logs, Metriken, Audit-Trails",
+        },
+      ],
     },
     audience: {
+      eyebrow: "Für wen",
       heading: "Wenn Regeln nicht mehr reichen.",
-      intro:
-        "Viele Abläufe sind zu variabel für klassische Automatisierung. Autonome Agenten übernehmen Aufgaben, die Kontext, Einschätzung und Handlungsspielraum erfordern – zuverlässig und nachvollziehbar.",
+      bodyHtml:
+        'Viele Abläufe sind zu variabel für klassische Automatisierung. <span class="font-semibold">Autonome Agenten</span> übernehmen Aufgaben, die <span class="font-semibold">Kontext, Einschätzung und Handlungsspielraum</span> erfordern – zuverlässig und nachvollziehbar.',
       bullets: [
         "Unternehmen mit bereits etablierten KI- und Prozesslösungen.",
         "Komplexe, variable Abläufe jenseits einfacher Wenn-Dann-Regeln.",
         "Teams, die Kapazität für strategische Arbeit freisetzen wollen.",
       ],
     },
-    features: [
-      {
-        title: "Use-Case-Fokus",
-        description:
-          "Nicht jeder Prozess braucht einen Agenten. Wir klären, wo Autonomie echten Mehrwert stiftet – und wo klassische Automatisierung reicht.",
-      },
-      {
-        title: "Kontrollierte Autonomie",
-        description:
-          "Agenten handeln innerhalb definierter Grenzen: klare Rollen, Rechte und Eskalationswege – keine Black-Box-Entscheidungen.",
-      },
-      {
-        title: "Beobachtbarkeit",
-        description:
-          "Jede Aktion ist nachvollziehbar: Logs, Metriken und Audit-Trails, damit Systeme kontrollierbar bleiben.",
-      },
-    ],
+    features: {
+      heading: "Was in jedem Agenten-System steckt",
+      items: [
+        {
+          icon: "compass",
+          title: "Use-Case-Fokus",
+          body: "Nicht jeder Prozess braucht einen Agenten. Wir klären, wo Autonomie echten Mehrwert stiftet – und wo klassische Automatisierung reicht.",
+        },
+        {
+          icon: "shield",
+          title: "Kontrollierte Autonomie",
+          body: "Agenten handeln innerhalb definierter Grenzen: klare Rollen, Rechte und Eskalationswege – keine Black-Box-Entscheidungen.",
+        },
+        {
+          icon: "eye",
+          title: "Beobachtbarkeit",
+          body: "Jede Aktion ist nachvollziehbar: Logs, Metriken und Audit-Trails, damit Systeme kontrollierbar bleiben.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden autonome Agenten von Nesani",
       name: "Philipp M.",
+      role: "Beispielrezension",
       quote:
         "Unsere Agenten übernehmen Aufgaben, bei denen wir vorher immer einen Mitarbeitenden brauchten – und liefern in einer Konsistenz, die vorher gar nicht möglich war.",
     },
+    processBanner: {
+      heading: "So entstehen Ihre Agenten.",
+      body: "Vier klare Schritte von der Use-Case-Definition bis ins überwachte Deployment – mit Sicherheits- und Governance-Ebene von Anfang an.",
+    },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Use-Case-Definition",
-        description:
-          "Wir klären gemeinsam, welche Aufgaben sich für autonome Agenten eignen – und welche nicht. Ohne Hype, mit klarem Fokus.",
+        body: "Wir klären gemeinsam, welche Aufgaben sich für autonome Agenten eignen – und welche nicht. Ohne Hype, mit klarem Fokus.",
         bullets: [
           "Aufgaben- und Wertschöpfungsanalyse",
           "Risiko- und Grenzbewertung",
@@ -248,10 +310,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Architektur",
-        description:
-          "Design der Agenten-Struktur: Rollen, Rechte, Tools, Gedächtnis und Eskalationswege – als stabile Grundlage für den Betrieb.",
+        body: "Design der Agenten-Struktur: Rollen, Rechte, Tools, Gedächtnis und Eskalationswege – als stabile Grundlage für den Betrieb.",
         bullets: [
           "Agenten- und Rollenmodell",
           "Tool- und System-Anbindung",
@@ -259,10 +320,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Entwicklung & Tests",
-        description:
-          "Iterativer Aufbau mit Testszenarien, Evaluations-Runden und kontrollierter Erweiterung des Handlungsspielraums.",
+        body: "Iterativer Aufbau mit Testszenarien, Evaluations-Runden und kontrollierter Erweiterung des Handlungsspielraums.",
         bullets: [
           "Prototyp und Iterationen",
           "Evaluations- und Sicherheitstests",
@@ -270,10 +330,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Deployment & Monitoring",
-        description:
-          "Produktiver Betrieb mit Monitoring, Audit-Trails und klar definierten Rückfallprozessen – damit Autonomie nicht zu Undurchschaubarkeit wird.",
+        body: "Produktiver Betrieb mit Monitoring, Audit-Trails und klar definierten Rückfallprozessen – damit Autonomie nicht zu Undurchschaubarkeit wird.",
         bullets: [
           "Live-Deployment",
           "Monitoring und Alerts",
@@ -283,9 +342,10 @@ export const services: Service[] = [
     ],
     finalCta: {
       heading: "Bereit, Kapazität freizusetzen?",
-      text: "Ein unverbindliches Erstgespräch – wir prüfen, wo autonome Agenten Sinn ergeben und wo nicht. Ehrlich und ohne Aufschlag.",
+      body: "Ein unverbindliches Erstgespräch – wir prüfen, wo autonome Agenten Sinn ergeben und wo nicht. Ehrlich und ohne Aufschlag.",
     },
   },
+
   {
     slug: "social-media",
     shortName: "Social Media",
@@ -293,49 +353,71 @@ export const services: Service[] = [
     tagline:
       "Konsistente Markenpräsenz über Kanäle hinweg – mit Inhalten, die ziehen, statt nur sichtbar zu sein.",
     hero: {
-      eyebrow: "Social Media & Online-Präsenz",
       heading: "Strategische digitale Markenwirkung.",
-      subline:
-        "Keine klassischen Posting-Pläne. Stattdessen: Markenpräsenz, die durch klare Tonalität, konsistente Profilarchitektur und vertrauensaufbauende Inhalte funktioniert.",
+      bodyHtml:
+        'Keine klassischen Posting-Pläne. Stattdessen: <span class="font-semibold">Markenpräsenz</span>, die durch klare Tonalität, konsistente Profilarchitektur und <span class="font-semibold">vertrauensaufbauende Inhalte</span> funktioniert.',
+      image: "/images/services/leistung-social-media.png",
+      imageAlt: "Social Media und Online-Präsenz",
+      cards: [
+        {
+          icon: "palette",
+          title: "Tonalität & Bildsprache",
+          body: "Erkennbar im Feed",
+        },
+        {
+          icon: "calendar",
+          title: "Redaktionsstruktur",
+          body: "Plan, Styleguide, Rhythmus",
+        },
+      ],
     },
     audience: {
+      eyebrow: "Für wen",
       heading: "Sichtbar werden, statt nur präsent sein.",
-      intro:
-        "Online-Präsenz ist kein Feed, sondern ein Vertrauensversprechen. Wer ernst genommen werden will, braucht mehr als Posting-Routine – nämlich Positionierung, Wiedererkennbarkeit und eine klare Handschrift.",
+      bodyHtml:
+        'Online-Präsenz ist kein Feed, sondern ein <span class="font-semibold">Vertrauensversprechen</span>. Wer ernst genommen werden will, braucht mehr als Posting-Routine – nämlich <span class="font-semibold">Positionierung, Wiedererkennbarkeit und eine klare Handschrift</span>.',
       bullets: [
         "Gründer und Selbstständige mit Sichtbarkeitsbedarf.",
-        "Unternehmen mit inkonsistentem oder inaktivem Social-Media-Auftritt.",
+        "Unternehmen mit inkonsistentem oder inaktivem Auftritt.",
         "Brands, die ihre Positionierung schärfen wollen.",
       ],
     },
-    features: [
-      {
-        title: "Profil-Architektur",
-        description:
-          "Plattformauswahl, technisches Setup und Bio-Optimierung – konsistent über alle Kanäle hinweg, sodass jede Touchpoint zur Marke passt.",
-      },
-      {
-        title: "Tonalität & Bildsprache",
-        description:
-          "Eine erkennbare Stimme und eine visuelle Handschrift, die zur Marke passt und im Scrollen auffällt – statt im Feed zu verschwinden.",
-      },
-      {
-        title: "Redaktionsstruktur",
-        description:
-          "Themen, Formate, Rhythmus – dokumentiert im Styleguide und Redaktionsplan, damit Inhalte selbstständig entstehen können.",
-      },
-    ],
+    features: {
+      heading: "Was in jeder Online-Präsenz steckt",
+      items: [
+        {
+          icon: "layout",
+          title: "Profil-Architektur",
+          body: "Plattformauswahl, technisches Setup und Bio-Optimierung – konsistent über alle Kanäle hinweg, sodass jeder Touchpoint zur Marke passt.",
+        },
+        {
+          icon: "palette",
+          title: "Tonalität & Bildsprache",
+          body: "Eine erkennbare Stimme und eine visuelle Handschrift, die zur Marke passt und im Scrollen auffällt – statt im Feed zu verschwinden.",
+        },
+        {
+          icon: "calendar",
+          title: "Redaktionsstruktur",
+          body: "Themen, Formate, Rhythmus – dokumentiert im Styleguide und Redaktionsplan, damit Inhalte selbstständig entstehen können.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden Social Media mit Nesani",
       name: "Madeleine v. H.",
+      role: "Beispielrezension",
       quote:
         "Unser Auftritt war vorher nur ein Feed. Nach dem Projekt hat unsere Marke eine klare Stimme – und Kunden merken das beim ersten Kontakt.",
     },
+    processBanner: {
+      heading: "So entsteht Ihre Markenpräsenz.",
+      body: "Vier klare Schritte von der Positionierung bis zum laufenden Redaktionsplan – mit klarer Handschrift statt Posting-Akkord.",
+    },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Positionierung",
-        description:
-          "Klärung der Online-Identität und Zielgruppe – wofür steht die Marke, für wen, mit welcher Haltung.",
+        body: "Klärung der Online-Identität und Zielgruppe – wofür steht die Marke, für wen, mit welcher Haltung.",
         bullets: [
           "Markenkern und Tonalität",
           "Zielgruppen-Verständnis",
@@ -343,10 +425,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Kanal & Profil",
-        description:
-          "Plattformauswahl und technisches Profil-Setup – nur dort präsent sein, wo es wirklich Wirkung entfaltet.",
+        body: "Plattformauswahl und technisches Profil-Setup – nur dort präsent sein, wo es wirklich Wirkung entfaltet.",
         bullets: [
           "Kanalauswahl statt Gießkanne",
           "Profil- und Bio-Optimierung",
@@ -354,10 +435,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Content-Konzept",
-        description:
-          "Definition von Themen, Formaten und Tonalität – ein Konzept, das skaliert, ohne an Klarheit zu verlieren.",
+        body: "Definition von Themen, Formaten und Tonalität – ein Konzept, das skaliert, ohne an Klarheit zu verlieren.",
         bullets: [
           "Themenwelten und Formate",
           "Tonalität und Bildsprache",
@@ -365,10 +445,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Übergabe & Struktur",
-        description:
-          "Bereitstellung von Redaktionsplan und Styleguide – damit Inhalte auch ohne Agentur laufen.",
+        body: "Bereitstellung von Redaktionsplan und Styleguide – damit Inhalte auch ohne Agentur laufen.",
         bullets: [
           "Redaktionsplan",
           "Styleguide mit klaren Regeln",
@@ -378,9 +457,10 @@ export const services: Service[] = [
     ],
     finalCta: {
       heading: "Bereit für eine klare Markenwirkung?",
-      text: "Ein unverbindliches Erstgespräch – wir klären Positionierung, Kanäle und Ziele. Antwort innerhalb von 24 Stunden.",
+      body: "Ein unverbindliches Erstgespräch – wir klären Positionierung, Kanäle und Ziele. Antwort innerhalb von 24 Stunden.",
     },
   },
+
   {
     slug: "ki-assistenten",
     shortName: "KI-Assistenten",
@@ -388,49 +468,71 @@ export const services: Service[] = [
     tagline:
       "Eigene Assistenten und Chatbots, die Routineanfragen übernehmen, 24/7 antworten und Ihr Team entlasten.",
     hero: {
-      eyebrow: "KI-Assistenten & Chatbots",
       heading: "KI, die für Sie kommuniziert.",
-      subline:
-        "Jede Anfrage, die manuell beantwortet werden muss, kostet Zeit. Jede Anfrage, die zu lange wartet, kostet Kunden. KI-Assistenten lösen beides.",
+      bodyHtml:
+        'Jede Anfrage, die <span class="font-semibold">manuell</span> beantwortet werden muss, kostet Zeit. Jede Anfrage, die <span class="font-semibold">zu lange wartet</span>, kostet Kunden. KI-Assistenten lösen beides.',
+      image: "/images/services/leistung-ki-assistenten.png",
+      imageAlt: "KI-Assistent für Kundenkommunikation",
+      cards: [
+        {
+          icon: "book",
+          title: "Wissensbasis",
+          body: "Antwortet auf Basis Ihrer Inhalte",
+        },
+        {
+          icon: "plug",
+          title: "Integration",
+          body: "Website, CRM, Messenger",
+        },
+      ],
     },
     audience: {
+      eyebrow: "Für wen",
       heading: "Erstkontakt ohne Wartezeit.",
-      intro:
-        "Kunden erwarten schnelle Antworten – jederzeit. KI-Assistenten übernehmen wiederkehrende Anfragen, filtern qualifizierte Leads und schaffen Freiraum für das, worauf es wirklich ankommt.",
+      bodyHtml:
+        'Kunden erwarten <span class="font-semibold">schnelle Antworten – jederzeit</span>. KI-Assistenten übernehmen wiederkehrende Anfragen, filtern <span class="font-semibold">qualifizierte Leads</span> und schaffen Freiraum für das, worauf es wirklich ankommt.',
       bullets: [
         "Dienstleister mit vielen Erstanfragen und FAQ-Themen.",
         "E-Commerce und Plattformen mit Support-Volumen.",
         "Teams, die 24/7-Verfügbarkeit ohne Schichtbetrieb brauchen.",
       ],
     },
-    features: [
-      {
-        title: "Eigene Wissensbasis",
-        description:
-          "Der Assistent antwortet auf Basis Ihrer Inhalte – dokumentiert, kontrolliert und jederzeit aktualisierbar.",
-      },
-      {
-        title: "Design & Logik",
-        description:
-          "Gesprächsführung, Tonalität und Eskalationswege – klar definiert, damit der Assistent zur Marke passt.",
-      },
-      {
-        title: "Integration & Handover",
-        description:
-          "Anbindung an Website, CRM oder Messenger – mit sauberer Übergabe an Menschen, wenn es nötig ist.",
-      },
-    ],
+    features: {
+      heading: "Was in jedem KI-Assistenten steckt",
+      items: [
+        {
+          icon: "book",
+          title: "Eigene Wissensbasis",
+          body: "Der Assistent antwortet auf Basis Ihrer Inhalte – dokumentiert, kontrolliert und jederzeit aktualisierbar.",
+        },
+        {
+          icon: "spark",
+          title: "Design & Logik",
+          body: "Gesprächsführung, Tonalität und Eskalationswege – klar definiert, damit der Assistent zur Marke passt.",
+        },
+        {
+          icon: "plug",
+          title: "Integration & Handover",
+          body: "Anbindung an Website, CRM oder Messenger – mit sauberer Übergabe an Menschen, wenn es nötig ist.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden KI-Assistenten von Nesani",
       name: "Tobias R.",
+      role: "Beispielrezension",
       quote:
         "Unser Support beantwortet inzwischen nur noch die Fälle, die wirklich Aufmerksamkeit brauchen. Der Rest läuft zuverlässig über den Assistenten – und Kunden merken den Unterschied kaum.",
     },
+    processBanner: {
+      heading: "So entsteht Ihr KI-Assistent.",
+      body: "Vier klare Schritte von der Wissensbasis bis zur laufenden Optimierung – datenschutzkonform und zur Marke passend.",
+    },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Wissensbasis",
-        description:
-          "Aufbau einer strukturierten, gepflegten Wissensbasis – damit der Assistent verlässlich und nachvollziehbar antwortet.",
+        body: "Aufbau einer strukturierten, gepflegten Wissensbasis – damit der Assistent verlässlich und nachvollziehbar antwortet.",
         bullets: [
           "Inhalte sammeln und strukturieren",
           "Qualität und Aktualität sichern",
@@ -438,10 +540,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Design & Logik",
-        description:
-          "Festlegen von Tonalität, Gesprächsführung und Eskalationspfaden – damit der Assistent menschlich wirkt, ohne Grenzen zu verlieren.",
+        body: "Festlegen von Tonalität, Gesprächsführung und Eskalationspfaden – damit der Assistent menschlich wirkt, ohne Grenzen zu verlieren.",
         bullets: [
           "Tonalität und Gesprächsführung",
           "Eskalationswege zum Menschen",
@@ -449,10 +550,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Integration",
-        description:
-          "Einbindung in Ihre Kanäle und Systeme – mit sicherer Authentifizierung und sauberer Datenflusslogik.",
+        body: "Einbindung in Ihre Kanäle und Systeme – mit sicherer Authentifizierung und sauberer Datenflusslogik.",
         bullets: [
           "Einbindung in Website und Kanäle",
           "CRM- und Tool-Integration",
@@ -460,10 +560,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Test & Optimierung",
-        description:
-          "Iterative Tests mit echten Dialogen – damit der Assistent über Zeit nicht schlechter, sondern besser wird.",
+        body: "Iterative Tests mit echten Dialogen – damit der Assistent über Zeit nicht schlechter, sondern besser wird.",
         bullets: [
           "Testläufe mit echten Dialogen",
           "Qualitäts- und Sicherheitschecks",
@@ -473,9 +572,10 @@ export const services: Service[] = [
     ],
     finalCta: {
       heading: "Bereit, Kommunikation neu zu denken?",
-      text: "Ein unverbindliches Erstgespräch – wir klären Anwendungsfall, Tonalität und Ziele. Antwort innerhalb von 24 Stunden.",
+      body: "Ein unverbindliches Erstgespräch – wir klären Anwendungsfall, Tonalität und Ziele. Antwort innerhalb von 24 Stunden.",
     },
   },
+
   {
     slug: "systemarchitektur",
     shortName: "Systemarchitektur",
@@ -483,49 +583,71 @@ export const services: Service[] = [
     tagline:
       "Maßgeschneiderte Softwarelösungen mit klarer Architektur – dokumentiert, wartbar und gebaut, um zu skalieren.",
     hero: {
-      eyebrow: "Individuelle Systemarchitektur",
       heading: "Maßgeschneiderte digitale Infrastruktur.",
-      subline:
-        "Wenn Standardlösungen an Grenzen stoßen, braucht es eine Architektur, die zu Ihren Prozessen passt – skalierbar, sicher und wartbar.",
+      bodyHtml:
+        'Wenn Standardlösungen an Grenzen stoßen, braucht es eine <span class="font-semibold">Architektur</span>, die zu Ihren Prozessen passt – <span class="font-semibold">skalierbar, sicher und wartbar</span>.',
+      image: "/images/services/leistung-systemarchitektur.png",
+      imageAlt: "Individuelle Systemarchitektur",
+      cards: [
+        {
+          icon: "layers",
+          title: "Saubere Architektur",
+          body: "Module, Schnittstellen, Datenflüsse",
+        },
+        {
+          icon: "cog",
+          title: "Betrieb & Übergabe",
+          body: "CI/CD, Monitoring, Logging",
+        },
+      ],
     },
     audience: {
+      eyebrow: "Für wen",
       heading: "Wenn Standard nicht mehr ausreicht.",
-      intro:
-        "Viele Unternehmen erreichen einen Punkt, an dem SaaS-Tools, Plug-ins und Baukästen ihre Prozesse eher einschränken als ermöglichen. Dann braucht es eine eigene, saubere Architektur – kein Workaround, sondern eine Grundlage.",
+      bodyHtml:
+        'Viele Unternehmen erreichen einen Punkt, an dem <span class="font-semibold">SaaS-Tools, Plug-ins und Baukästen</span> ihre Prozesse eher einschränken als ermöglichen. Dann braucht es eine <span class="font-semibold">eigene, saubere Architektur</span>.',
       bullets: [
         "Unternehmen an den Grenzen von Standardlösungen.",
         "Spezielle Daten-, Prozess- oder Integrationsanforderungen.",
-        "Teams, die Skalierbarkeit und Wartbarkeit langfristig sichern wollen.",
+        "Teams, die Skalierbarkeit langfristig sichern wollen.",
       ],
     },
-    features: [
-      {
-        title: "Klare Anforderungen",
-        description:
-          "Bevor Code entsteht, entstehen saubere Anforderungen: fachlich, technisch und organisatorisch abgestimmt.",
-      },
-      {
-        title: "Saubere Architektur",
-        description:
-          "Module, Datenflüsse und Schnittstellen, die langfristig tragen – dokumentiert, testbar, wartbar.",
-      },
-      {
-        title: "Betrieb & Übergabe",
-        description:
-          "Sauberer Betriebsmodus: CI/CD, Monitoring, Logging und eine Übergabe, bei der Ihr Team nicht ratlos bleibt.",
-      },
-    ],
+    features: {
+      heading: "Was in jeder Systemarchitektur steckt",
+      items: [
+        {
+          icon: "checklist",
+          title: "Klare Anforderungen",
+          body: "Bevor Code entsteht, entstehen saubere Anforderungen: fachlich, technisch und organisatorisch abgestimmt.",
+        },
+        {
+          icon: "layers",
+          title: "Saubere Architektur",
+          body: "Module, Datenflüsse und Schnittstellen, die langfristig tragen – dokumentiert, testbar, wartbar.",
+        },
+        {
+          icon: "cog",
+          title: "Betrieb & Übergabe",
+          body: "Sauberer Betriebsmodus: CI/CD, Monitoring, Logging und eine Übergabe, bei der Ihr Team nicht ratlos bleibt.",
+        },
+      ],
+    },
     testimonial: {
+      heading: "So erleben Kunden Systemarchitektur von Nesani",
       name: "Daniela K.",
+      role: "Beispielrezension",
       quote:
         "Unsere Plattform trägt heute Lasten, bei denen die alte Lösung längst gescheitert wäre – und unser Team kann sie wirklich selbst betreiben.",
     },
+    processBanner: {
+      heading: "So entsteht Ihre Architektur.",
+      body: "Vier klare Schritte von den Anforderungen bis in den laufenden Betrieb – ohne Quick-Fix-Kultur und ohne versteckte Abhängigkeiten.",
+    },
     process: [
       {
-        number: "01",
+        num: "01",
         title: "Requirements",
-        description:
-          "Wir klären fachliche und technische Anforderungen – und trennen Muss-Kriterien von Kann-Kriterien, bevor Aufwand entsteht.",
+        body: "Wir klären fachliche und technische Anforderungen – und trennen Muss-Kriterien von Kann-Kriterien, bevor Aufwand entsteht.",
         bullets: [
           "Fachliche Anforderungen",
           "Technische Rahmenbedingungen",
@@ -533,10 +655,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "02",
+        num: "02",
         title: "Architektur-Design",
-        description:
-          "Entwurf der Systemarchitektur: Module, Schnittstellen, Datenmodell und Betriebsmodell – technisch fundiert und nachvollziehbar.",
+        body: "Entwurf der Systemarchitektur: Module, Schnittstellen, Datenmodell und Betriebsmodell – technisch fundiert und nachvollziehbar.",
         bullets: [
           "Modul- und Schichtenmodell",
           "Schnittstellen und Datenmodell",
@@ -544,10 +665,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "03",
+        num: "03",
         title: "Entwicklung",
-        description:
-          "Saubere Umsetzung mit Fokus auf Wartbarkeit, Testabdeckung und Performance – keine versteckten Abhängigkeiten, keine Quick-Fix-Kultur.",
+        body: "Saubere Umsetzung mit Fokus auf Wartbarkeit, Testabdeckung und Performance – keine versteckten Abhängigkeiten, keine Quick-Fix-Kultur.",
         bullets: [
           "Iterative Umsetzung",
           "Qualität und Testabdeckung",
@@ -555,10 +675,9 @@ export const services: Service[] = [
         ],
       },
       {
-        number: "04",
+        num: "04",
         title: "Übergabe & Betrieb",
-        description:
-          "Dokumentation, CI/CD, Monitoring und Schulung – damit das System nicht nur läuft, sondern langfristig betrieben und weiterentwickelt werden kann.",
+        body: "Dokumentation, CI/CD, Monitoring und Schulung – damit das System nicht nur läuft, sondern langfristig betrieben und weiterentwickelt werden kann.",
         bullets: [
           "CI/CD und Monitoring",
           "Dokumentation und Schulung",
@@ -568,7 +687,7 @@ export const services: Service[] = [
     ],
     finalCta: {
       heading: "Bereit für eine Architektur, die trägt?",
-      text: "Ein unverbindliches Erstgespräch – wir schauen auf Ihre aktuelle Infrastruktur und klären, wo Passform sich wirklich lohnt.",
+      body: "Ein unverbindliches Erstgespräch – wir schauen auf Ihre aktuelle Infrastruktur und klären, wo Passform sich wirklich lohnt.",
     },
   },
 ];

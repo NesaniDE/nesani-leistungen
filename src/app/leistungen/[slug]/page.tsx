@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { SiteHeader } from "@/components/site/header";
-import { SiteFooter } from "@/components/site/footer";
+import { Header } from "@/components/site/header";
+import { Footer } from "@/components/site/footer";
 import { ServiceHero } from "@/components/site/service-hero";
-import { AudienceSection } from "@/components/site/audience-section";
-import { FeaturesSection } from "@/components/site/features-section";
-import { TestimonialSection } from "@/components/site/testimonial-section";
-import { ProcessSection } from "@/components/site/process-section";
-import { CtaSection } from "@/components/site/cta-section";
-import { RelatedServices } from "@/components/site/related-services";
+import { ServiceAudienceSection } from "@/components/site/service-audience";
+import { ServiceFeaturesSection } from "@/components/site/service-features";
+import { ServiceTestimonialSection } from "@/components/site/service-testimonial";
+import {
+  ServiceProcessBanner,
+  ServiceProcessCards,
+} from "@/components/site/service-process";
+import { ServiceFinalCta } from "@/components/site/service-final-cta";
 import { getServiceBySlug, services } from "@/lib/services";
 
 type Params = { slug: string };
@@ -33,11 +35,12 @@ export async function generateMetadata({
   }
 
   return {
-    title: service.hero.heading,
-    description: service.hero.subline,
+    title: service.shortName,
+    description: service.tagline,
     openGraph: {
-      title: `${service.navName} – NESANI`,
-      description: service.hero.subline,
+      title: `${service.navName} – Nesani`,
+      description: service.tagline,
+      images: [service.hero.image],
     },
   };
 }
@@ -56,21 +59,28 @@ export default async function ServicePage({
 
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <ServiceHero
-          eyebrow={service.hero.eyebrow}
-          heading={service.hero.heading}
-          subline={service.hero.subline}
+      <Header />
+      <main>
+        <ServiceHero service={service} />
+        <ServiceAudienceSection audience={service.audience} />
+        <ServiceFeaturesSection
+          heading={service.features.heading}
+          features={service.features.items}
         />
-        <AudienceSection audience={service.audience} />
-        <FeaturesSection features={service.features} />
-        <TestimonialSection testimonial={service.testimonial} />
-        <ProcessSection steps={service.process} />
-        <CtaSection cta={service.finalCta} />
-        <RelatedServices currentSlug={service.slug} />
+        <ServiceTestimonialSection
+          heading={service.testimonial.heading}
+          quote={service.testimonial.quote}
+          name={service.testimonial.name}
+          role={service.testimonial.role}
+        />
+        <ServiceProcessBanner
+          heading={service.processBanner.heading}
+          body={service.processBanner.body}
+        />
+        <ServiceProcessCards steps={service.process} />
+        <ServiceFinalCta cta={service.finalCta} />
       </main>
-      <SiteFooter />
+      <Footer />
     </>
   );
 }

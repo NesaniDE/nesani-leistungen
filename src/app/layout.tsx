@@ -10,8 +10,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "NESANI – Sichtbarer. Effizienter. Autonomer.",
-    template: "%s | NESANI",
+    default: "Nesani – Sichtbarer. Effizienter. Autonomer.",
+    template: "%s | Nesani",
   },
   description:
     "Wir bauen moderne Websites, KI-Workflows, autonome Agenten, KI-Assistenten und individuelle Systemarchitekturen – aus Schwäbisch Gmünd.",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "NESANI",
+    siteName: "Nesani",
   },
 };
 
@@ -29,13 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="de"
-      className={`${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
-      </body>
+    <html lang="de" className={`${inter.variable} h-full antialiased`}>
+      <body className="min-h-full bg-white text-[#050505]">{children}</body>
     </html>
   );
 }
